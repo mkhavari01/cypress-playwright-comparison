@@ -4,7 +4,7 @@
 
 describe('My First Test', () => {
 
-  beforeEach(() => {
+  // beforeEach(() => {
     // If you're running node.js on your server, you might add a before or beforeEach hook that executes an npm task.
     // in the blow code we see api configration for our testing
 
@@ -21,9 +21,9 @@ describe('My First Test', () => {
     ///cy.request('POST', '/test/seed/user', { name: 'Mahdi' })
     ///  .its('body')
     ///  .as('currentUser')
-  })
+  // })
 
-  it('Visits the Kitchen Sink', () => {
+  it('Visit Page ', () => {
     cy.visit("/")
   });
 
@@ -39,10 +39,12 @@ describe('My First Test', () => {
     cy.url().should('include', '/commands/actions')
   });
 
+  // testing errors
+
   it('Get an input, type into it and verify that the value has been updated', () => {
     cy.get('.action-email')
     .type('mkhavari0120@gmail.com')
-    .should('have.value', 'mkhavari0120@gmail.com')
+    .should('have.value', 'falseValue@gmail.com')
   });
 
 })

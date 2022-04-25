@@ -1,15 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cypress testing engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <h1>
-    cypress Tesing
+    Cypress and Playwright comparison
   </h1>
+  <hr />
+  <div id="my-doc">
+    <p>
+    <h3>Cypress:</h3> <br />
+    ➕ Easy to understand documentation <br />
+    ➕ A broader community and easier to find answers about specific issues<br />
+    ➕ Easier to understand for people new to testing<br />
+    ➕ You only have to read up on one framework as Cypress has everything included.<br />
+    ➖ Doesn’t support multi-page and third-party implementations.<br />
+    ➖ More extensive and with more dependencies<br />
+    ➖ Generates several example files and folders<br />
+    ➖ You have to re-run tests to run in another browser.<br />
+    </p>
+    <p>
+    <h3>Playwright:</h3> <br />
+    ➕ Broader browser support <br />
+    ➕ Fewer dependencies than Cypress <br />
+    ➕ Supports multi-page and third-party implementations <br />
+    ➕ Lets you choose your test runner. <br />
+    ➕ Doesn’t generate any files. <br />
+    ➕ You can run multiple browsers using the same test. <br />
+    ➖ Documentation not as good <br />
+    ➖ Newer and with a smaller community <br />
+    </p>
+  </div>
+  <hr />
+  <div id="tutorials">
+    <h4>
+      Some complete youtube toturials
+    </h4>
+    <a href="https://www.youtube.com/watch?v=zY-IoTYcbWs&list=PL699Xf-_ilW7EyC6lMuU4jelKemmS6KgD">
+      Playwright Tutorial
+    </a>
+    <a href="https://www.youtube.com/watch?v=jX3v3N6oN5M&t=4370s">
+      Cypress Tutorial
+    </a>
+  </div>
+  <hr />
+  <div id="my-result">
+    <table>
+      <tbody>
+        <tr>
+          <th><b>Criteria</b></th>
+          <th><strong>Playwright</strong></th>
+          <th><strong>Cypress</strong></th>
+        </tr>
+        <tr>
+          <td><b>Language</b></td>
+          <td>Supports multiple languages such as JavaScript, Java, Python, and .NET C#</td>
+          <td><span style="font-weight: 400">Supports JavaScript</span></td>
+        </tr>
+        <tr>
+          <td><b>Test Runner Frameworks Supported</b></td>
+          <td><span style="font-weight: 400">Mocha, <a title="JEST Framework"
+                href="https://www.browserstack.com/guide/jest-framework-tutorial" target="_blank"
+                rel="noopener">Jest</a>,
+              Jasmine</span></td>
+          <td><span style="font-weight: 400">Mocha</span></td>
+        </tr>
+        <tr>
+          <td><b>Prerequisites</b></td>
+          <td><span style="font-weight: 400">NodeJS should be installed</span></td>
+          <td><span style="font-weight: 400">Java, Eclipse IDE, <a title="SeleniumStandalone Server"
+                href="https://www.browserstack.com/guide/difference-between-selenium-standalone-server-and-selenium-server"
+                target="_blank" rel="noopener">SeleniumStandalone Server</a>, Client Language Bindings, and Browser
+              Drivers should be installed</span></td>
+        </tr>
+        <tr>
+          <td><b>Operating Systems Supported</b></td>
+          <td><span style="font-weight: 400">Windows, Linux, and macOS</span></td>
+          <td>Windows, Linux, and macOS 10.9 and above</td>
+        </tr>
+        <tr>
+          <td><b>Open Source</b></td>
+          <td><span style="font-weight: 400">Open Source and Free</span></td>
+          <td><span style="font-weight: 400">Open Source and Free</span></td>
+        </tr>
+        <tr>
+          <td><b>Architecture</b></td>
+          <td><span style="font-weight: 400">Headless Browser with event-driven architecture</span></td>
+          <td>Executes test cases directly inside the browser</td>
+        </tr>
+        <tr>
+          <td><b>Browsers Supported</b></td>
+          <td><span style="font-weight: 400">Chromium, Firefox, and WebKit</span></td>
+          <td><span style="font-weight: 400">Chrome, Firefox, and Edge</span></td>
+        </tr>
+        <tr>
+          <td><b>Support</b></td>
+          <td><span style="font-weight: 400">Since Playwright is fairly new, the support from the community is limited
+              as
+              compared to Selenium</span></td>
+          <td><span style="font-weight: 400">Strong community support from professionals across the world</span><span
+              style="font-weight: 400">&nbsp;</span></td>
+        </tr>
+        <tr>
+          <td><b>Real Devices Support</b></td>
+          <td><span style="font-weight: 400">Does not support real devices for Mobile Browser Tests but supports <a
+                title="Emulators Simulators" href="https://www.browserstack.com/emulators-simulators" target="_blank"
+                rel="noopener">emulators</a></span></td>
+          <td><span style="font-weight: 400">Supports <a title="Real Device Cloud"
+                href="https://www.browserstack.com/real-device-cloud" target="_blank" rel="noopener">real device
+                clouds</a> and remote servers</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="summery">
+      <h3>What to pick?</h3>
+      The answer is it depends on what functionality you find essential. If you’re new to testing and want a more plug-and-play approach that
+      includes everything you need to get started, then Cypress is the best choice for you. It has good documentation
+      and
+      a broader community that makes it easier to get help and find answers to specific scenarios you find challenging.
+      <br>If you are more familiar with testing, need to test Webkit browsers or your tests need to cover scenarios
+      spanning
+      across multiple pages and domains, then Playwright is the choice for you. Playwright is also the right choice for
+      you if you have fallen in love with a specific test runner or don’t need one at all. With the framework being
+      reasonably new, we can also expect that the community, documentation and framework in general will continue to
+      improve over time.
+    </div>
+  </div>
+  
 </body>
+
 </html>

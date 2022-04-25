@@ -1,4 +1,68 @@
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
   font-size: 50px;
   text-align: center;
+}
+
+table {
+  border: 1px solid #eee;
+  margin-bottom: 21px;
+  table-layout: fixed;
+  width: 780px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-size: 14px;
+  width: 2%;
+  vertical-align: top;
+  text-align: left;
+  padding: 21px;
+  background: #ededed;
+}
+
+td {
+  width: 2%;
+  vertical-align: top;
+  padding: 21px;
+  border-bottom: 1px solid #eee;
+}
+
+#my-doc {
+  display: flex;
+  justify-content: space-around;
+}
+
+#my-result {
+  display: flex;
+}
+
+#my-result table {
+  width: 70%;
+  font-size: 14px;
+}
+
+.summery{
+  width: 50%;
+  padding: 10px;
+  line-height: 2;
+  margin-top: 20px;
+}
+#tutorials {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#tutorials a {
+  background: rgb(46, 46, 138);
+  border-radius: 5px;
+  color: #ededed;
+  margin: 0 20px;
+  padding: 6px;
 }
