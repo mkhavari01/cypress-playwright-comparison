@@ -26,25 +26,52 @@ describe('My First Test', () => {
   it('Visit Page ', () => {
     cy.visit("/")
   });
-
-  it('finds the content "type"', () => {
-    cy.contains('type').click();
+  
+  it('checking the url is the one that we want', () => {
+    cy.url().should('include', '/')
   });
 
-  // it("stops the cypress to track and debug",()=>{
-  //   cy.pause()
-  // });
+  it('finds the content "Create new User"', () => {
+    cy.contains('Create new User').click();
+  });
 
-  it('checking the url is the one that we want', () => {
-    cy.url().should('include', '/commands/actions')
+
+  it('fills the inputs and click submit', () => {
+    cy.get('input').eq(0).click().type("Mahdi Khavari")
+    cy.get('input').eq(1).click().type("09034604960")
+    cy.contains('make new one').click()
+  });
+
+  it('Delete All previous Datas except the new one we made', () => {
+    cy.contains("mobina").next().next().contains('Delete').click()
+    cy.contains("kimia").next().next().contains('Delete').click()
+    cy.contains("mohi").next().next().contains('Delete').click()
+  });
+
+  it('Create a new User', () => {
+    cy.contains('Create new User').click();
+    cy.get('input').eq(0).click().type("Bitcoin company")
+    cy.get('input').eq(1).click().type("123456789")
+    cy.contains('make new one').click()
+  });
+
+  it('Edit User', () => {
+    cy.contains('Mahdi').next().next().contains('Edit').click()
+    cy.get('input').eq(0).click().clear().type("We Edited User Data")
+    cy.get('input').eq(1).click().clear().type("09904604960")
+    cy.contains('Save changes').click()
   });
 
   // testing errors
 
-  it('Get an input, type into it and verify that the value has been updated', () => {
-    cy.get('.action-email')
-    .type('mkhavari0120@gmail.com')
-    .should('have.value', 'falseValue@gmail.com')
+  it("testing errors",()=>{
+    cy.contains("Test error")
   });
+
+  // it('Get an input, type into it and verify that the value has been updated', () => {
+  //   cy.get('.action-email')
+  //   .type('mkhavari0120@gmail.com')
+  //   .should('have.value', 'falseValue@gmail.com')
+  // });
 
 })
