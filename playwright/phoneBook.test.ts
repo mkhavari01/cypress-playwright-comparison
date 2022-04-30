@@ -7,7 +7,7 @@ test('test', async () => {
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  await page.goto('https://mkhavari01.github.io/test-cypress/');
+  await page.goto('https://mkhavari01.github.io/website-for-testing/');
   // Click text=Create new User
   await page.locator('text=Create new User').click();
   // Click input[type="text"] >> nth=0
