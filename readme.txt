@@ -1,3 +1,5 @@
+# Open up command line
+
 // cypress
 1. npm install (installing dependencies)
 2. npm run cypress (to run cypess CLI)
